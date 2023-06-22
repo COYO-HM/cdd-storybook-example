@@ -2,6 +2,8 @@
   "name": "cdd-storybook-example",
   "version": "1.0.1",
   "description": "원피트 프리온보딩 스토리북 챌린지",
+  "author": "coyo",
+  "license": "MIT",
   "keywords": [],
   "scripts": {
     "build": "rm -rf dist && rollup -c",
@@ -17,15 +19,12 @@
       "require": "./dist/cjs/index.js"
     }
   },
-  "author": "coyo",
-  "license": "MIT",
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.21",
     "@storybook/addon-interactions": "^7.0.21",
     "@storybook/addon-links": "^7.0.21",
     "@storybook/blocks": "^7.0.21",
     "@storybook/react": "^7.0.21",
-    "@storybook/react-webpack5": "^7.0.23",
     "@storybook/testing-library": "^0.0.14-next.2",
     "esbuild": "^0.18.4",
     "prettier": "2.8.8",
@@ -37,7 +36,8 @@
     "storybook": "^7.0.21"
   },
   "dependencies": {
-    "styled-components": "^6.0.0-rc.3"
+    "styled-components": "^6.0.0-rc.3",
+    "@storybook/react-webpack5": "^7.0.23"
   },
   "peerDependencies": {
     "react": "^18.2.0",
