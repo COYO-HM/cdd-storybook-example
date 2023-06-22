@@ -2,23 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-export const Button = ({ backgroundColor, color, label, ...props }) => {
+export const Button = ({ color, backgroundColor, label, ...props }) => {
   return (
-    <DefaultButton
-      type={"button"}
-      color={color}
-      backgroundColor={backgroundColor}
-      {...props}
-    >
-      {label}
-    </DefaultButton>
+      <DefaultButton $color={color} $backgroundColor={backgroundColor} {...props}>
+        {label}
+      </DefaultButton>
   );
 };
 
 const DefaultButton = styled.button`
-  background-color: ${(props) => props.backgroundColor || "navy"};
-  color: ${(props) => props.color || "white"};
-  font-family: "Nunito Sans", "Helvetica Neue", H elvetica, Arial, sans-serif;
+  color: ${(props) => (props.$color ? props.$color : '#000')};
+  background-color: ${(props) =>
+      props.$backgroundColor ? props.$backgroundColor : '#BF4F74'};
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
   border-radius: 3em;
@@ -28,9 +24,21 @@ const DefaultButton = styled.button`
 `;
 
 Button.propTypes = {
-  backgroundColor: PropTypes.string,
+  /**
+   * What text color to use
+   */
   color: PropTypes.string,
+  /**
+   * What background color to use
+   */
+  backgroundColor: PropTypes.string,
+  /**
+   * Button contents
+   */
   label: PropTypes.string.isRequired,
+  /**
+   * Optional click handler
+   */
   onClick: PropTypes.func,
 };
 
