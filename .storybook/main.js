@@ -1,6 +1,6 @@
-import svgr from 'vite-plugin-svgr';
 
 const config = {
+    core:{builder:'@storybook/builder-vite'},
     stories: [
         '../src/components/**/*.mdx',
         '../src/components/**/*.stories.@(js|jsx)',
@@ -16,10 +16,6 @@ const config = {
     },
     docs: {
         autodocs: 'tag',
-    },
-    async viteFinal(config) {
-        (config.plugins).push(svgr());
-        return config;
     },
 };
 export default config;
