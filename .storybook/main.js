@@ -1,6 +1,5 @@
 
 const config = {
-    core:{builder:'@storybook/builder-vite'},
     stories: [
         '../src/components/**/*.mdx',
         '../src/components/**/*.stories.@(js|jsx)',

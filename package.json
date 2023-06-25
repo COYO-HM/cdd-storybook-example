@@ -1,18 +1,18 @@
 {
   "name": "cdd-storybook-example-library",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "원피트 프리온보딩 스토리북 챌린지",
   "author": "coyo",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["cli", "storybook"],
   "scripts": {
     "build": "rm -rf dist && rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepack": "npm run build"
   },
-  "type": "module",
   "main": "dist/esm/index.js",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
@@ -36,8 +36,7 @@
     "storybook": "^7.0.21"
   },
   "dependencies": {
-    "@storybook/react-webpack5": "^7.0.21",
-    "@svgr/plugin-svgo": "^8.0.1",
+    "@storybook/react-webpack5": "^7.0.22",
     "styled-components": "^6.0.0-rc.3"
   },
   "peerDependencies": {
