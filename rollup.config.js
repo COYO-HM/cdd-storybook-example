@@ -10,7 +10,7 @@ export default {
   plugins: [
     esbuild({
       // All options are optional
-      include: /\.[jt]sx?$/, // default, inferred from `loaders` option
+      include: /\.jsx?$/, // default, inferred from `loaders` option
       minify: process.env.NODE_ENV === "production",
       jsx: "automatic",
     }),
