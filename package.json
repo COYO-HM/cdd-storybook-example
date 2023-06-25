@@ -36,7 +36,8 @@
   },
   "dependencies": {
     "@storybook/react-webpack5": "^7.0.21",
-    "styled-components": "6.0.0-rc.3"
+    "@svgr/plugin-svgo": "^8.0.1",
+    "styled-components": "^6.0.0-rc.3"
   },
   "peerDependencies": {
     "react": "^18.2.0",

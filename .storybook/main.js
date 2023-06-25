@@ -1,3 +1,5 @@
+import svgr from 'vite-plugin-svgr';
+
 const config = {
     stories: [
         '../src/components/**/*.mdx',
@@ -14,6 +16,10 @@ const config = {
     },
     docs: {
         autodocs: 'tag',
+    },
+    async viteFinal(config) {
+        (config.plugins).push(svgr());
+        return config;
     },
 };
 export default config;
