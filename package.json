@@ -27,7 +27,6 @@
     "@storybook/react": "^7.0.21",
     "@storybook/testing-library": "^0.0.14-next.2",
     "esbuild": "^0.18.4",
-    "prettier": "2.8.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,8 +35,8 @@
     "storybook": "^7.0.21"
   },
   "dependencies": {
-    "styled-components": "^6.0.0-rc.3",
-    "@storybook/react-webpack5": "^7.0.23"
+    "@storybook/react-webpack5": "^7.0.21",
+    "styled-components": "6.0.0-rc.3"
   },
   "peerDependencies": {
     "react": "^18.2.0",
